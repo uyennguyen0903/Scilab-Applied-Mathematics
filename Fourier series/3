@@ -1,0 +1,15 @@
+n = 4000;
+x = -%pi : %pi/4/n : %pi;
+lambda = 1;
+
+S = lambda/%pi;
+
+k = 1 : n;
+a = -2 * sin(k*(%pi-lambda))./k/%pi;
+
+for k = 1 : n
+    S = S + a(k)*cos(k*x);
+end
+
+clf
+plot(x,S);

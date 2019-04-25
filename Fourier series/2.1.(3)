@@ -1,0 +1,16 @@
+clf 
+n = 4000;
+a = [];
+b = [];
+for i = 1 : n
+    a = [a, -1/(2*i*%pi).^2];
+    b = [b, -1/(4*i*%pi)];
+end
+x = 0 : 0.001 : 1/2;
+S = zeros(x);
+omega = 4*%pi;
+for i = 1 : n
+    S = S + a(i)*cos(i*omega*x) + b(i)*sin(i*omega*x);
+end
+S = S + 1/6;
+plot(x,S);
