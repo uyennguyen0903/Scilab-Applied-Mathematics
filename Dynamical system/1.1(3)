@@ -1,0 +1,12 @@
+function Xprime = f(t,X)
+    Xprime = [ a*(X(2)-X(1))
+               b*X(1)-X(2)-X(1)*X(3)
+               X(1)*X(2)-c*X(3)];
+endfunction
+
+a = 10;
+b = 28;
+c = 8/3;
+clf;
+
+isoview

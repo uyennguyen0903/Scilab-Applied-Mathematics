@@ -1,0 +1,17 @@
+function Xprime = f(t,X)
+    Xprime = [ X(2)
+               -k*X(2) + X(1) - X(1)^3];
+endfunction
+
+//function Xprime = f(t,X)
+//    x = X(1);
+//    xprime = X(2);
+//    Xprime = [ xprime
+//               -k*xprime+x-x^3];
+//endfunction
+
+k = 0.15;
+t = linspace(0,1,1000);
+//X0 = [1e-7;0];
+clf;
+fchamp(f,0,1+(-0.05:0.01:0.05),0+(-0.05:0.01:0.05));
